@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1b1028, #3b183f, #171329);
+  color: white;
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  font-size: 25px;
+  animation: float 8s infinite ease-in-out;
+  opacity: 0.5;
+}
+
+.heart1 {
+  left: 10%;
+  top: 80%;
+}
+
+.heart2 {
+  left: 80%;
+  top: 70%;
+  animation-delay: 2s;
+}
+
+.heart3 {
+  left: 50%;
+  top: 90%;
+  animation-delay: 4s;
+}
+
+.heart4 {
+  left: 25%;
+  top: 60%;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(-700px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.welcome-card,
+.card,
+.message-card,
+.music-card,
+.verse-card,
+.surprise-card,
+.final-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 35px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.welcome-card {
+  text-align: center;
+  margin-top: 80px;
+  padding: 60px 30px;
+}
+
+.small-text {
+  color: #ffb6d9;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.8;
+  color: #f5e9f2;
+}
+
+.intro {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+button {
+  border: none;
+  padding: 13px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff75ae, #a855f7);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 25px rgba(255, 117, 174, 0.7);
+}
+
+.start-btn {
+  font-size: 17px;
+  padding: 16px 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+.music-card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.cd {
+  font-size: 65px;
+  transition: 0.3s;
+}
+
+.playing {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.music-info {
+  flex: 1;
+}
+
+.message-card {
+  text-align: center;
+  position: relative;
+}
+
+.sparkle {
+  font-size: 40px;
+  color: #ffd1e8;
+}
+
+.message-card p {
+  font-size: 18px;
+  min-height: 80px;
+}
+
+.card {
+  text-align: center;
+}
+
+#compliment {
+  font-size: 19px;
+  color: #ffd7eb;
+  min-height: 55px;
+}
+
+.verse-card {
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 160, 200, 0.15),
+    rgba(150, 100, 255, 0.15)
+  );
+}
+
+.cross {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.verse-card p {
+  font-style: italic;
+  font-size: 17px;
+}
+
+.verse-card span {
+  display: block;
+  margin-top: 15px;
+  color: #ffc5df;
+}
+
+.mood-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#moodMessage {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  display: none;
+}
+
+.surprise-card {
+  text-align: center;
+}
+
+.hidden-surprise {
+  margin-top: 30px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  animation: appear 1s ease;
+}
+
+.hidden-surprise p {
+  white-space: pre-line;
+}
+
+.big-heart {
+  font-size: 70px;
+  animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.final-card {
+  text-align: center;
+  padding: 60px 30px;
+}
+
+.final-card h1 {
+  font-size: 35px;
+}
+
+.signature {
+  margin-top: 25px;
+  color: #ffb8d9;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  .welcome-card {
+    margin-top: 30px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .welcome-card,
+  .card,
+  .message-card,
+  .music-card,
+  .verse-card,
+  .surprise-card,
+  .final-card {
+    padding: 25px 18px;
+  }
+
+  .music-card {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .music-info {
+    flex-basis: 100%;
+  }
+}

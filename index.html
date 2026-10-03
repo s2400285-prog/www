@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Little Something For Julie ❤️</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="background">
+      <div class="heart heart1">❤️</div>
+      <div class="heart heart2">💗</div>
+      <div class="heart heart3">💕</div>
+      <div class="heart heart4">💖</div>
+    </div>
+
+    <main class="container">
+      <div class="welcome-card">
+        <p class="small-text">A little surprise for you...</p>
+
+        <h1>Hey, Julie ❤️</h1>
+
+        <p class="intro">
+          I made this little page just to remind you that you deserve a
+          beautiful day today.
+        </p>
+
+        <button class="start-btn" onclick="startPage()">
+          ✨ Open Your Surprise
+        </button>
+      </div>
+
+      <section id="mainContent" class="hidden">
+        <!-- MUSIC PLAYER -->
+
+        <div class="music-card">
+          <div class="cd" id="cd">💿</div>
+
+          <div class="music-info">
+            <h2>🎵 A Song For You</h2>
+            <p>Because every beautiful day needs a soundtrack.</p>
+          </div>
+
+          <button class="music-btn" onclick="toggleMusic()" id="musicButton">
+            ▶ Play Music
+          </button>
+
+          <audio id="music" src="music.mp3"></audio>
+        </div>
+
+        <!-- MESSAGE -->
+
+        <div class="message-card">
+          <span class="sparkle">✦</span>
+
+          <h2>Something I Want You To Remember</h2>
+
+          <p id="message">
+            You don't have to have everything figured out today. Just take
+            things one step at a time.
+          </p>
+
+          <button onclick="nextMessage()">💌 Another Message</button>
+        </div>
+
+        <!-- COMPLIMENT MACHINE -->
+
+        <div class="card">
+          <h2>🌷 Your Little Compliment Machine</h2>
+
+          <p id="compliment">
+            Click the button whenever you need a little reminder.
+          </p>
+
+          <button onclick="giveCompliment()">💖 Give Me A Compliment</button>
+        </div>
+
+        <!-- BIBLE VERSE -->
+
+        <div class="verse-card">
+          <div class="cross">✝</div>
+
+          <h2>A Little Reminder From God</h2>
+
+          <p>
+            “For I know the plans I have for you,” declares the Lord, “plans to
+            prosper you and not to harm you, plans to give you hope and a
+            future.”
+          </p>
+
+          <span>— Jeremiah 29:11</span>
+        </div>
+
+        <!-- CHOOSE YOUR MOOD -->
+
+        <div class="card">
+          <h2>🌸 How Are You Feeling?</h2>
+
+          <p>Choose one. I'll give you something to read.</p>
+
+          <div class="mood-buttons">
+            <button onclick="mood('happy')">😊 Happy</button>
+
+            <button onclick="mood('sad')">🥺 Sad</button>
+
+            <button onclick="mood('tired')">😴 Tired</button>
+
+            <button onclick="mood('stressed')">😵 Stressed</button>
+          </div>
+
+          <div id="moodMessage"></div>
+        </div>
+
+        <!-- SURPRISE -->
+
+        <div class="surprise-card">
+          <h2>🎁 One Last Thing...</h2>
+
+          <p>There is something hidden here.</p>
+
+          <button onclick="showSurprise()">🎀 Open It</button>
+
+          <div id="surprise" class="hidden-surprise">
+            <div class="big-heart">❤️</div>
+
+            <h2>Julie...</h2>
+
+            <p>
+              I hope today treats you gently. I hope you smile for reasons you
+              don't expect. I hope you remember how special you are. And
+              whenever your day becomes difficult, I hope you remember that
+              there is someone who genuinely wants to see you happy. You deserve
+              good things, beautiful moments, peace in your heart, success in
+              everything you do, and people who appreciate you. So please take
+              care of yourself today. Eat properly. Rest when you're tired.
+              Smile when you can. And most importantly...
+
+              <strong> Don't forget how amazing you are. ❤️ </strong>
+            </p>
+          </div>
+        </div>
+
+        <!-- FINAL -->
+
+        <div class="final-card">
+          <h1>🌙 Have A Beautiful Day</h1>
+
+          <p>
+            Whatever happens today, I hope you get through it with a smile. And
+            if today isn't your best day, that's okay too. Tomorrow is another
+            chance. Keep going, Julie. 🌷
+          </p>
+
+          <div class="signature">— From someone who cares about you ❤️</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
